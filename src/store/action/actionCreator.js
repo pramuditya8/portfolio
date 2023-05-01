@@ -20,6 +20,14 @@ export function fetchPortfolios() {
           link: "",
           tags: ["React", "Redux", "TailwindCSS"],
         },
+        {
+          id: 3,
+          name: "MOFI",
+          img: "https://firebasestorage.googleapis.com/v0/b/portfolio-71585.appspot.com/o/images%2Fmofi.png?alt=media&token=49c98d7a-3b53-4687-9695-905eaa004224",
+          description: "Movie Streaming website with Payment Gateway",
+          link: "",
+          tags: ["Vue", "Pinia", "TailwindCSS"],
+        },
       ];
       dispatch({ type: PORTFOLIOS_FETCH_SUCCESS, payload: portfoliosData });
     } catch (error) {
