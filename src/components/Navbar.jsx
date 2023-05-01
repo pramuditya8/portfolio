@@ -8,7 +8,10 @@ export const Navbar = () => {
       <nav class="bg-white border-gray-200 dark:bg-gray-900 fixed top-0 left-0 right-0">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <NavLink to={"/"}>
-            <img src="./src/assets/icon.png" class="h-8 mr-3" />
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/portfolio-71585.appspot.com/o/icon.png?alt=media&token=39715416-2bb5-4e79-8dc0-ac7616ef4cee"
+              class="h-8 mr-3"
+            />
           </NavLink>
           <button
             data-drawer-target="logo-sidebar"
@@ -56,7 +59,7 @@ export const Navbar = () => {
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4">
           {location.pathname !== "/" && (
             <img
-              src="./src/assets/Mantle.jpg"
+              src="https://firebasestorage.googleapis.com/v0/b/portfolio-71585.appspot.com/o/Mantle.jpg?alt=media&token=ec35866f-d34b-46e7-acd9-ff6db142525d"
               className="w-full h-[2px] object-fill"
             />
           )}
@@ -78,7 +81,10 @@ export const Navbar = () => {
               to={"/"}
               className="flex items-center md:w-[12rem] w-[10rem] border-b-[1px] pb-4 border-black"
             >
-              <img src="./src/assets/icon.png" className="h-8 mr-3" />
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/portfolio-71585.appspot.com/o/icon.png?alt=media&token=39715416-2bb5-4e79-8dc0-ac7616ef4cee"
+                className="h-8 mr-3"
+              />
             </NavLink>
           </button>
           <ul className="space-y-2 font-medium mt-4">

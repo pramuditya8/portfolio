@@ -1,7 +1,6 @@
 import React from "react";
 
 export const PortfolioPost = ({ item, index, portfolios }) => {
-  console.log(item);
   return (
     <div className="w-full">
       <div className="md:flex md:justify-start py-10">
@@ -35,7 +34,7 @@ export const PortfolioPost = ({ item, index, portfolios }) => {
       </div>
       {index !== portfolios.length - 1 && (
         <img
-          src="./src/assets/Mantle.jpg"
+          src="https://firebasestorage.googleapis.com/v0/b/portfolio-71585.appspot.com/o/Mantle.jpg?alt=media&token=ec35866f-d34b-46e7-acd9-ff6db142525d"
           className="w-full h-[2px] object-fill"
         />
       )}
