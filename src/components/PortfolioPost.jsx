@@ -1,6 +1,7 @@
 import React from "react";
 
 export const PortfolioPost = ({ item, index, portfolios }) => {
+  console.log(item);
   return (
     <div className="w-full">
       <div className="md:flex md:justify-start py-10">
@@ -21,6 +22,15 @@ export const PortfolioPost = ({ item, index, portfolios }) => {
           >
             {item.link}
           </a>
+          <br />
+          <br />
+          {item?.tags?.map((tag) => {
+            return (
+              <span class="bg-gray-100 text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-400 border border-gray-500">
+                {tag}
+              </span>
+            );
+          })}
         </div>
       </div>
       {index !== portfolios.length - 1 && (
