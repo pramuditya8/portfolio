@@ -13,7 +13,7 @@ export const AboutPage = () => {
             </p>
             <div className="pt-5">
               <h1 className=" text-lg font-semibold my-auto w-full">Contact</h1>
-              <p className=" text-normal my-auto w-full">
+              <p className=" text-normal my-auto w-full mt-2">
                 <a
                   href="https://github.com/pramuditya8"
                   className="flex justify-start items-center"
@@ -39,8 +39,8 @@ export const AboutPage = () => {
             <h1 className=" text-lg font-semibold my-auto pt-5 md:pt-0">
               Skills
             </h1>
-            <div className="w-full flex justify-start">
-              <div className=" w-1/2 mt-1">
+            <div className="w-full flex justify-start mt-2">
+              <div className=" w-1/2">
                 <h1 className=" text-normal font-medium my-auto w-full">
                   Frontend
                 </h1>
@@ -61,7 +61,7 @@ export const AboutPage = () => {
         <div className="pt-3 md:pr-4 w-full">
           <div className="pt-5">
             <h1 className=" text-lg font-semibold my-auto w-full">Activity</h1>
-            <h1 className=" text-normal my-auto w-full">
+            <h1 className=" text-normal my-auto w-full mt-2">
               My coding activity in the last 30 days based on Wakatime
             </h1>
             <div className="w-full md:w-[60%]">

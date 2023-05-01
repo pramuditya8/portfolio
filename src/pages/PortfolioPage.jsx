@@ -7,8 +7,6 @@ export const PortfolioPage = () => {
     return state.portfolios;
   });
 
-  console.log(portfolios);
-
   const dispatch = useDispatch();
 
   useEffect(() => {

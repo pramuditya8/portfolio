@@ -1,14 +1,16 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 export const Navbar = () => {
+  const location = useLocation();
+  console.log(location);
   return (
     <>
       <nav class="bg-white border-gray-200 dark:bg-gray-900 fixed top-0 left-0 right-0">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <Link to={"/"}>
+          <NavLink to={"/"}>
             <img src="./src/assets/icon.png" class="h-8 mr-3" />
-          </Link>
+          </NavLink>
           <button
             data-drawer-target="logo-sidebar"
             data-drawer-toggle="logo-sidebar"
@@ -34,29 +36,31 @@ export const Navbar = () => {
           <div class="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               <li>
-                <Link
+                <NavLink
                   to={"/portfolio"}
                   class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >
                   Portfolio
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link
+                <NavLink
                   to={"/about"}
                   class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >
                   About
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </div>
         </div>
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4">
-          <img
-            src="./src/assets/Mantle.jpg"
-            className="w-full h-[2px] object-fill"
-          />
+          {location.pathname !== "/" && (
+            <img
+              src="./src/assets/Mantle.jpg"
+              className="w-full h-[2px] object-fill"
+            />
+          )}
         </div>
       </nav>
 
@@ -66,12 +70,18 @@ export const Navbar = () => {
         aria-label="Sidebar"
       >
         <div className="h-full p-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
-          <NavLink
-            to={"/"}
-            className="flex items-center md:w-[27rem] w-64 border-b-[1px] pb-4 border-black"
+          <button
+            type="button"
+            data-drawer-hide="logo-sidebar"
+            aria-controls="logo-sidebar"
           >
-            <img src="./src/assets/icon.png" className="h-8 mr-3" />
-          </NavLink>
+            <NavLink
+              to={"/"}
+              className="flex items-center md:w-[12rem] w-[10rem] border-b-[1px] pb-4 border-black"
+            >
+              <img src="./src/assets/icon.png" className="h-8 mr-3" />
+            </NavLink>
+          </button>
           <ul className="space-y-2 font-medium mt-4">
             <li>
               <button
